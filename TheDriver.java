@@ -6,8 +6,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TheDriver {
-	WebDriver driver;
-	WebDriverWait wait;
+	private WebDriver driver;
+	private WebDriverWait wait;
 	
 	TheDriver() {
 		driver = new FirefoxDriver();
@@ -22,7 +22,7 @@ public class TheDriver {
 		return wait;
 	}
 	
-	public void getURL(String s) {
+	public void setURL(String s) {
 		driver.get(s);
 	}
 	
@@ -56,6 +56,5 @@ public class TheDriver {
 	
 	public WebElement getWaitClassName(String s) {
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(s)));
-	}
-	
+	}	
 }
